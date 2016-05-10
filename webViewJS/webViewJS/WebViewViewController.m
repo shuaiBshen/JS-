@@ -11,7 +11,7 @@
 
 #define KScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
-#define kAppStoreUrl                @"http://10.223.3.139/weyoo/src/main/resources/static/appCenterV3/#/"
+#define kAppStoreUrl                @"网址"
 #define kAddAppName  @"addApp"
 #define kOpenAppName @"openApp"
 
@@ -47,6 +47,7 @@
     _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, KScreenWidth, KScreenHeight - 64) configuration:configuration];
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
+#warning 网址不正确需要替换
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:kAppStoreUrl]]];
     [self.view addSubview:_webView];
 }
